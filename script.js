@@ -7,7 +7,7 @@ const bici = [
     { nome: "mountain bike", peso: 14 },
     { nome: "bici da corsa", peso: 7 },
     { nome: "city bike", peso: 16 },
-    { nome: "bici elettrica", peso: 5 }
+    { nome: "bici elettrica", peso: 18 }
 ];
 
 // creo una variabile per avere un dato da cui partire
@@ -57,9 +57,9 @@ function getRandomInt(min, max) {
 for (let i = 0; i < squadre.length; i++) {
     // creo una costante che equivale al singolo indice di squadre
     const squadra = squadre[i];
-    // do un numero casuale ai parametri di squadra con range da 0 a 50/20
-    squadra.puntiFatti = getRandomInt(0, 50);
+    // do un numero casuale ai parametri di squadra con range da 0 a 20/50
     squadra.falliSubiti = getRandomInt(0, 20);
+    squadra.puntiFatti = getRandomInt(0, 50);
 
     // se i punti fatti da ogni squadra sono uguali o maggiori di zero (condizione sempre vera)
     // allora pusha su nomiEfalli il nome della squadra e i falliSubiti
@@ -69,9 +69,9 @@ for (let i = 0; i < squadre.length; i++) {
             nome: squadra.nome,
             falliSubiti: squadra.falliSubiti
         });
-
     }
 }
+
 
 console.log(nomiEfalli);
 

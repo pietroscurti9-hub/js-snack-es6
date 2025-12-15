@@ -51,10 +51,10 @@ function getRandomInt(min, max) {
 
 for (let i = 0; i < squadre.length; i++) {
     const squadra = squadre[i];
-    squadra.puntiFatti = getRandomInt(0, 100);
+    squadra.puntiFatti = getRandomInt(0, 50);
     squadra.falliSubiti = getRandomInt(0, 20);
 
-    if (squadra.puntiFatti !== 0) {
+    if (squadra.puntiFatti >= 0) {
         nomiEfalli.push({
             nome: squadra.nome,
             falliSubiti: squadra.falliSubiti
